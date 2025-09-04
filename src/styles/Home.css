@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.homepage {
+  height: 100vh;
+  width: 100vw;
+ 
+  background-image: url("../assets/travel.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px 80px;
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 10;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  flex: 1;
+  color: white;
+  position: relative;
+  user-select: none;
+}
+.arrow {
+  color: #df6951;
+  font-weight: 900;
+  font-size: 24px;
+  margin-left: 6px;
+  position: relative;
+  top: 3px;
+  border-radius: 8px;
+  display: inline-block;
+  transform: rotate(20deg);
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 80px;
+  flex: 2;
+  justify-content: center;
+}
+.nav-item {
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+.nav-item.active {
+  font-weight: 800;
+  border-bottom: 3px solid #f26a4e;
+  padding-bottom: 4px;
+}
+.nav-item.active:hover {
+  border-color: #f26a4e;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(9px);
+  border-radius: 12px;
+  padding: 10px 20px;
+  list-style: none;
+  min-width: 180px;
+  z-index: 20;
+  user-select: none;
+  font-weight: 500;
+  color: white;
+}
+.dropdown-menu li {
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+.dropdown-menu li:last-child {
+  border: none;
+}
+.dropdown-menu li:hover {
+  color: #f26a4e;
+}
+.contact-btn {
+  background-color: #f26a4e;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 22px;
+  border-radius: 7px;
+  cursor: pointer;
+  flex: 0.8;
+  max-width: 130px;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+.contact-btn:hover {
+  background-color: #d1543d;
+}
+.header {
+  padding: 0 40px;
+  height: calc(100vh - 80px); /* 80px approximate nav height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  backdrop-filter: brightness(0.85);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.7)
+  );
+}
+.header-content h1 {
+  font-weight: 800;
+  font-size: 4.8rem;
+  line-height: 1.2;
+  max-width: 800px;
+  margin-left: 150px;
+  margin-bottom: 95px;
+  user-select: none;
+}
+.search-form {
+  display: flex;
+  align-items: center;
+  background: rgba(224, 221, 221, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  margin-left: 150px;
+  max-width: 800px;
+  margin-bottom: 250px;
+  margin-top: 100px;
+  padding: 14px 24px;
+  gap: 15px;
+  user-select: none;
+}
+.search-form input,
+.search-form select {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0 8px;
+  outline: none;
+  flex: 1;
+  min-width: 100px;
+  cursor: pointer;
+}
+.search-form select {
+  cursor: pointer;
+}
+.search-form input::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 600;
+}
+.divider {
+  width: 1.5px;
+  background: white;
+  opacity: 0.4;
+  height: 35px;
+  margin: 0 12px;
+}
+.search-form button {
+  background-color: #f26a4e;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+.search-form button:hover {
+  background-color: #d1543d;
+}
+.scroll-down-arrow {
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+  opacity: 0.7;
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+  cursor: default;
+}
+.search-form select {
+  color: rgb(255, 255, 255);
+  background: transparent;
+  border-radius: 4px;
+  padding: 6px;
+}
+.search-form select option {
+  color: black;
+  background: white;
+}
+@media (max-width: 900px) {
+  .header-content h1 {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+  .nav-links {
+    gap: 18px;
+  }
+  .search-form {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .search-form button {
+    flex-grow: 1;
+    max-width: none;
+  }
+}

@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.offerservice h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 153px;
+    color: #213547;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Services Section */
+.service-grid {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.service-cards {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 20px;
+  width: 310px;
+  gap: 20px;
+  height: 390px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-cards img {
+  width: 107px;
+  height: 115px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-cards h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-top: 10px;
+}
+.service-cards p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* Hover Effects */
+.service-cards:hover {
+  transform: translateY(-12px);
+  box-shadow: 0px 12px 25px rgba(0,0,0,0.15);
+}
+
+.service-cards:hover img {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.service-cards::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: #f08b77; 
+  border-radius: 30px;   
+  bottom: -30px;         /* adjust position */
+  left: -30px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+  z-index: 7; 
+}
+
+
+.service-cards:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.service-cards * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-cards {
+    padding: 20px 15px;
+  }
+  .service-cards img {
+    width: 70px;
+    height: 70px;
+  }
+  .service-cards h2 {
+    font-size: 1rem;
+  }
+}
+
